@@ -43,46 +43,62 @@ let rowNum = 1
 
 function check () {
     let letters = chosen.split("")
-    if ((document.getElementById("box_" + rowNum + "x" + 1).value) + (document.getElementById("box_" + rowNum + "x" + 2).value) + (document.getElementById("box_" + rowNum + "x" + 3).value) + (document.getElementById("box_" + rowNum + "x" + 4).value) + (document.getElementById("box_" + rowNum + "x" + 5).value)) {
-    
+    if (((document.getElementById("box_" + rowNum + "x" + 1).value) == "") || ((document.getElementById("box_" + rowNum + "x" + 2).value) == "") || ((document.getElementById("box_" + rowNum + "x" + 3).value) == "") || ((document.getElementById("box_" + rowNum + "x" + 4).value) == "") || ((document.getElementById("box_" + rowNum + "x" + 5).value) == "")) {
+        console.log("not done")
+        alert ("Finish the line before checking")
+        return 
     }
-    loop:
-    for (let cell = 1; cell < 6; cell ++) {
-        if ((document.getElementById("box_" + rowNum + "x" + cell).value) == "") {
-            console.log("hello")
+    let inputArr = []
+    for (i=1; i < 6; i ++) {
+        inputArr.push((document.getElementById("box_" + rowNum + "x" + i).value))
+    }
+    let inputWord = inputArr.join("")
+    console.log(inputWord)
+    if (wordList.includes(inputWord) == true) {
+        loop:
+        for (let cell = 1; cell < 6; cell ++) {
+            if ((document.getElementById("box_" + rowNum + "x" + cell).value) == "") {
+                console.log("hello")
 
-        }   
-        
-        else if (letters [cell - 1] == (document.getElementById("box_" + rowNum + "x" + cell).value)) {
-            console.log("match!")
-            document.getElementById("box_" + rowNum + "x" + cell).className = "correct"
-            document.getElementById("box_" + rowNum + "x" + cell).disabled = true
-    
-        }
-
-        else if (letters [0] == (document.getElementById("box_" + rowNum + "x" + cell).value) || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[1] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[2] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[3] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[4]) {
-            console.log("almost")
-            document.getElementById("box_" + rowNum + "x" + cell).className = "almost"
-            document.getElementById("box_" + rowNum + "x" + cell).disabled = true
+            }   
             
-        }
+            else if (letters [cell - 1] == (document.getElementById("box_" + rowNum + "x" + cell).value)) {
+                console.log("match!")
+                document.getElementById("box_" + rowNum + "x" + cell).className = "correct"
+                document.getElementById("box_" + rowNum + "x" + cell).disabled = true
+        
+            }
 
-        else if ((document.getElementById("box_" + rowNum + "x" + cell).value) != letters [cell - 1]) {
-                console.log("no luck!")
-                document.getElementById("box_" + rowNum + "x" + cell).className = "false"
+            else if (letters [0] == (document.getElementById("box_" + rowNum + "x" + cell).value) || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[1] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[2] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[3] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[4]) {
+                console.log("almost")
+                document.getElementById("box_" + rowNum + "x" + cell).className = "almost"
                 document.getElementById("box_" + rowNum + "x" + cell).disabled = true
                 
-        }
-        if (cell == 5 && ((document.getElementById("box_" + rowNum + "x" + 1).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 2).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 3).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 4).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 5).value) != "")) {
-            console.log("it's me!")
-            rowNum += 1
-            console.log(rowNum)
-            for (i = 1; i < 6; i++) {
-                document.getElementById("box_" + (rowNum) + "x" + i).removeAttribute("readonly");
             }
+
+            else if ((document.getElementById("box_" + rowNum + "x" + cell).value) != letters [cell - 1]) {
+                    console.log("no luck!")
+                    document.getElementById("box_" + rowNum + "x" + cell).className = "false"
+                    document.getElementById("box_" + rowNum + "x" + cell).disabled = true
+                    
+            }
+            if (cell == 5 && ((document.getElementById("box_" + rowNum + "x" + 1).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 2).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 3).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 4).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 5).value) != "")) {
+                console.log("it's me!")
+                rowNum += 1
+                console.log(rowNum)
+                for (i = 1; i < 6; i++) {
+                    document.getElementById("box_" + (rowNum) + "x" + i).removeAttribute("readonly");
+                }
+            }
+        
         }
-     
+            
     }
+
+    else {
+        alert ("Invalid word")
+    }
+    
 }        
 // function check (rowNum) {
 //     let stopFunction = 0

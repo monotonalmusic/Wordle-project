@@ -2,6 +2,7 @@ html {
     font-size: 10px;
 }
 body {
+    height: 120rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -14,22 +15,29 @@ body {
     text-align: center;
     font-size: 5rem;
 }
+button {
+    height: 5rem;
+    width: 15rem;
+    font-size: 2rem;
+}
 #buttons {
     width: 50rem;
+    border-radius: 1rem;
     display: flex;
     justify-content: space-between;
 }
 #container {
+    height: 100rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    gap:1rem;
 }
-#evaluate {
-    width: 10rem;
-}
+
 .row {
     display: flex;
+    gap: 1rem;
 }
 
 .text-box {
@@ -38,7 +46,8 @@ body {
     align-items: center;
     height: 15rem;
     width: 15rem;
-    border: 1px solid black;
+    border: 2px solid black;
+    border-radius: 1rem;
 }
 
 .letter {
@@ -49,6 +58,7 @@ body {
     font-size: 13rem;
     text-align: center;
     text-transform: uppercase;
+    border-radius: 1rem;
 }
 
 .correct {
@@ -58,7 +68,7 @@ body {
     text-align: center;
     background-color: green;
     text-transform: uppercase;
-
+    border-radius: 1rem;
 }
 
 
@@ -69,8 +79,7 @@ body {
     text-align: center;
     background-color: red;
     text-transform: uppercase;
-
-
+    border-radius: 1rem;
 }
 
 .almost {
@@ -80,6 +89,6 @@ body {
     text-align: center;
     background-color: yellow;
     text-transform: uppercase;
-
+    border-radius: 1rem;
 }
 
