@@ -1,0 +1,85 @@
+html {
+    font-size: 10px;
+}
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0rem;
+
+}
+#title {
+    text-align: center;
+    font-size: 5rem;
+}
+#buttons {
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+}
+#container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#evaluate {
+    width: 10rem;
+}
+.row {
+    display: flex;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    border: 1px solid black;
+}
+
+.letter {
+    background: none;
+    border: none;
+    height: 14rem;
+    width: 14rem;
+    font-size: 13rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.correct {
+    height: 14rem;
+    width: 14rem;
+    font-size: 13rem;
+    text-align: center;
+    background-color: green;
+    text-transform: uppercase;
+
+}
+
+
+.false {
+    height: 14rem;
+    width: 14rem;
+    font-size: 13rem;
+    text-align: center;
+    background-color: red;
+    text-transform: uppercase;
+
+
+}
+
+.almost {
+    height: 14rem;
+    width: 14rem;
+    font-size: 13rem;
+    text-align: center;
+    background-color: yellow;
+    text-transform: uppercase;
+
+}
+
