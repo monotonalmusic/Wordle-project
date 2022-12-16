@@ -84,22 +84,30 @@ function check () {
             }
             if (cell == 5 && ((document.getElementById("box_" + rowNum + "x" + 1).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 2).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 3).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 4).value) != "") && ((document.getElementById("box_" + rowNum + "x" + 5).value) != "")) {
                 console.log("it's me!")
+                if ((document.getElementById("box_" + rowNum + "x" + 1)).classList.contains('correct') == true && (document.getElementById("box_" + rowNum + "x" + 2)).classList.contains('correct') == true && (document.getElementById("box_" + rowNum + "x" + 3)).classList.contains('correct') == true && (document.getElementById("box_" + rowNum + "x" + 4)).classList.contains('correct') == true && (document.getElementById("box_" + rowNum + "x" + 5)).classList.contains('correct') == true) {
+                    alert ('You won!');
+                    break loop;   
+                              
+                }
                 rowNum += 1
                 console.log(rowNum)
                 for (i = 1; i < 6; i++) {
                     document.getElementById("box_" + (rowNum) + "x" + i).removeAttribute("readonly");
                 }
             }
-        
-        }
             
-    }
+            
 
+        }
+        
+             
+    }
+    
     else {
         alert ("Invalid word")
     }
-    
-}        
+}
+
 // function check (rowNum) {
 //     let stopFunction = 0
 //     reset (stopFunction)

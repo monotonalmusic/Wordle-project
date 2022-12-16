@@ -9,113 +9,115 @@
     <title>Wordle</title>
 </head>
 <body>
-    <h1 id="title">Wordle</h1>
-    <div id="buttons">
-        <button id="evaluate" onclick="check()">Check</button>
-        <button id="reload" onclick="window.location.reload(true)">Start over</button>
-    </div>
-    <div id="container">
-        <div class="row" id="row-1">
-            <div class="text-box">
-                <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_1x1">
-            </div>
-            <div class="text-box">
-                <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"class="letter" id="box_1x2">
-            </div>
-            <div class="text-box">
-                <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_1x3">
-            </div>
-            <div class="text-box">
-                <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_1x4">
-            </div>
-            <div class="text-box">
-                <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_1x5">
-            </div>
+    <div id="big-container">
+        <h1 id="title">Wordle</h1>
+        <div id="buttons">
+            <button id="evaluate" onclick="check()">Check</button>
+            <button id="reload" onclick="window.location.reload(true)">Start over</button>
         </div>
-        <div class="row" id="row-2">
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x1">
+        <div id="container">
+            <div class="row" id="row-1">
+                <div class="text-box">
+                    <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_1x1">
+                </div>
+                <div class="text-box">
+                    <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1"class="letter" id="box_1x2">
+                </div>
+                <div class="text-box">
+                    <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_1x3">
+                </div>
+                <div class="text-box">
+                    <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_1x4">
+                </div>
+                <div class="text-box">
+                    <input type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_1x5">
+                </div>
             </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x2">
+            <div class="row" id="row-2">
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x1">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x2">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x3">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x4">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x5">
+                </div>
             </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x3">
+            <div class="row" id="row-3">
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x1">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x2">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x3">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x4">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x5">
+                </div>
+                
             </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x4">
+            <div class="row" id="row-4">
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x1">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x2">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x3">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x4">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x5">
+                </div>
             </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_2x5">
+            <div class="row" id="row-5">
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_5x1">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_5x2">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_5x3">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)"; maxlength="1" class="letter" id="box_5x4">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)"; maxlength="1"class="letter" id="box_5x5">
+                </div>
             </div>
-        </div>
-        <div class="row" id="row-3">
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x1">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x2">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x3">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x4">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_3x5">
-            </div>
-            
-        </div>
-        <div class="row" id="row-4">
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x1">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x2">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x3">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x4">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_4x5">
-            </div>
-        </div>
-        <div class="row" id="row-5">
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_5x1">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_5x2">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_5x3">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)"; maxlength="1" class="letter" id="box_5x4">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)"; maxlength="1"class="letter" id="box_5x5">
-            </div>
-        </div>
-        <div class="row" id="row-6">
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x1">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x2">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x3">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x4">
-            </div>
-            <div class="text-box">
-                <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x5">
+            <div class="row" id="row-6">
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x1">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x2">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x3">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x4">
+                </div>
+                <div class="text-box">
+                    <input readonly type="text" autocomplete="off" onkeydown="return /[a-z]/i.test(event.key)" maxlength="1" class="letter" id="box_6x5">
+                </div>
             </div>
         </div>
     </div>
