@@ -69,7 +69,7 @@ function check () {
         
             }
 
-            else if (letters [0] == (document.getElementById("box_" + rowNum + "x" + cell).value) || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[1] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[2] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[3] || (document.getElementById("box_" + rowNum + "x" + cell).value) == letters[4]) {
+            else if (letters.includes(document.getElementById("box_" + rowNum + "x" + cell).value) == true) {
                 console.log("almost")
                 document.getElementById("box_" + rowNum + "x" + cell).className = "almost"
                 document.getElementById("box_" + rowNum + "x" + cell).disabled = true
